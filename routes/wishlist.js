@@ -5,7 +5,7 @@ const Wishlist = require("../models/Wishlist");
 
 router.get("/get-wishlist", async (req, res) => {
     const wishlist = await Wishlist.find({});
-
+    console.log(wishlist);
     return res.send({
         status: "success",
         data: [...wishlist],
